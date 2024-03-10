@@ -1,0 +1,13 @@
+.SonglistBox {
+    height: 400px;
+    overflow-y: scroll;
+  }
+  
+  .SonglistBox::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  .SonglistBox::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
