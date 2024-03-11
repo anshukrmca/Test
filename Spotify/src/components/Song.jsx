@@ -1,6 +1,6 @@
 import React from "react";
 
-const Song = () => {
+const Song = ({item}) => {
   return (
     <div>
       <div className="flex justify-between gap-2 mb-[2px] items-center bg-slate-100/20 hover:bg-slate-100/50 cursor-pointer p-2 rounded-md">
@@ -11,11 +11,12 @@ const Song = () => {
             alt="song"
           />
           <div>
-            <p>Song name</p>
-            <p className="font-thin text-sm">The script</p>
+            <p>{item?.title}</p>
+            <p className="font-thin text-sm">{item?.artist}</p>
           </div>
         </div>
-        <div>04:23</div>
+        <div>{(item?.duration / 60).toFixed(2)}</div>
+
       </div>
     </div>
   );
