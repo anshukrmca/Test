@@ -4,7 +4,7 @@ import Song from "./Song";
 import "./style.css";
 import PlayedSong from "./PlayedSong";
 import { useMutation } from "@apollo/client";
-import { UPDATE_RECENTLY_PLAYED } from "../queries";
+import { UPDATE_RECENTLY_PLAYED } from "../GraphQL/queries";
 
 const RecentPlay = ({ SongList, SongType }) => {
   const [updateRecentlyPlayed] = useMutation(UPDATE_RECENTLY_PLAYED);

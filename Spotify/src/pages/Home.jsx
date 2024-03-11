@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Logo from "../components/Logo";
 import RecentPlay from "../components/RecentPlay";
 import PlayedSong from "../components/PlayedSong";
-import { GET_SONGS } from "../queries";
+import { GET_SONGS } from "../GraphQL/queries";
 import { useQuery } from "@apollo/client";
 
 const Home = () => {
