@@ -1,9 +1,12 @@
+import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
-const SearchBar = ({ setSearchSong,SearchSong }) => {
+const SearchBar = ({setSearchSong,SearchSong}) => {
 
   const handleSearch = (e) => {
-    setSearchSong(e.target.value);
+    const newname = e.target.value;
+    setSearchSong(newname);
   };
+  
 
   return (
     <div className="flex justify-between items-center p-1 gap-4 bg-slate-100/20 rounded-md">

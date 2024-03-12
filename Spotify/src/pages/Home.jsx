@@ -14,9 +14,6 @@ const Home = () => {
       songType: SongType,
     },
   });
-
-
-  console.log(SearchSong)
   useEffect(() => {
     if (data) {
       setSongList(data.getSongs);
@@ -25,6 +22,7 @@ const Home = () => {
 
   const changeplayList = (songTypeName) => {
     setSongType(songTypeName);
+    setSearchSong('')
   };
   return (
     <div className="bg-slate-800 text-white min-h-screen">
@@ -61,7 +59,7 @@ const Home = () => {
           </ul>
         </div>
         <div className="w-3/4">
-          <RecentPlay SongList={SongList} SongType={SongType} setSearchSong={setSearchSong} SearchSong={SearchSong} />
+         <RecentPlay SongList={SongList} SongType={SongType} setSearchSong={setSearchSong} SearchSong={SearchSong}/>
         </div>
       </div>
       <div className="size-12 cursor-pointer -mt-10 mx-10 fixed rounded-full border border-black">
