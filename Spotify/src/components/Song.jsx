@@ -7,8 +7,8 @@ const Song = ({item}) => {
         <div className="flex gap-3">
           <img
             className="size-10 rounded-full border border-black"
-            src="https://cdn2.geckoandfly.com/wp-content/uploads/2017/12/530-album-cover.jpg"
-            alt="song"
+            src={`https://song-tc.pixelotech.com/`+ item?.photoUrl}
+            alt={item?.title}
           />
           <div>
             <p>{item?.title}</p>

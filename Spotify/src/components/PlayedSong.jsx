@@ -8,7 +8,7 @@ const PlayedSong = ({currentSong}) => {
       <p className="font-light">{currentSong?.artist}</p>
       <img
         className="md:h-80 mt-3 mx-auto rounded-md border border-black"
-        src="https://cdn2.geckoandfly.com/wp-content/uploads/2017/12/530-album-cover.jpg"
+        src={`https://song-tc.pixelotech.com/`+ currentSong?.photoUrl}
         alt="song"
       />
       <div>

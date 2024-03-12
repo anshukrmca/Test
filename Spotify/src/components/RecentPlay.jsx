@@ -47,7 +47,7 @@ const RecentPlay = ({ SongList, SongType }) => {
       <PlayList />
       </div>
       <div className="p-4 md:w-1/2">
-        <PlayedSong currentSong={currentSong} />
+      {currentSong && <PlayedSong currentSong={currentSong} />}
       </div>
       <div className="md:hidden block">
       <PlayList />
