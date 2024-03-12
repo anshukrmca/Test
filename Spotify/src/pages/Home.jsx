@@ -7,11 +7,16 @@ import { useQuery } from "@apollo/client";
 const Home = () => {
   const [SongList, setSongList] = useState([]);
   const [SongType, setSongType] = useState("FOR_YOU");
+  const [SearchSong, setSearchSong] = useState("");
   const { loading, error, data } = useQuery(GET_SONGS, {
     variables: {
+      search: SearchSong,
       songType: SongType,
     },
   });
+
+
+  console.log(SearchSong)
   useEffect(() => {
     if (data) {
       setSongList(data.getSongs);
@@ -56,7 +61,7 @@ const Home = () => {
           </ul>
         </div>
         <div className="w-3/4">
-         <RecentPlay SongList={SongList} SongType={SongType}/>
+          <RecentPlay SongList={SongList} SongType={SongType} setSearchSong={setSearchSong} SearchSong={SearchSong} />
         </div>
       </div>
       <div className="size-12 cursor-pointer -mt-10 mx-10 fixed rounded-full border border-black">

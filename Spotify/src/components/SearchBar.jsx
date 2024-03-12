@@ -1,11 +1,8 @@
-import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
-const SearchBar = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+const SearchBar = ({ setSearchSong,SearchSong }) => {
 
   const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-    onSearch(e.target.value);
+    setSearchSong(e.target.value);
   };
 
   return (
@@ -14,7 +11,7 @@ const SearchBar = ({ onSearch }) => {
         type="text"
         placeholder="Search for a song..."
         className="p-1 bg-transparent w-full outline-none "
-        value={searchTerm}
+        value={SearchSong}
         onChange={handleSearch}
       />
       <IoIosSearch size={25} />

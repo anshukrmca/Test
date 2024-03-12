@@ -6,7 +6,7 @@ import PlayedSong from "./PlayedSong";
 import { useMutation } from "@apollo/client";
 import { UPDATE_RECENTLY_PLAYED } from "../GraphQL/queries";
 
-const RecentPlay = ({ SongList, SongType }) => {
+const RecentPlay = ({ SongList, SongType,setSearchSong,SearchSong }) => {
   const [updateRecentlyPlayed] = useMutation(UPDATE_RECENTLY_PLAYED);
 
   const updateRecentSong = async (item) => {
@@ -23,7 +23,7 @@ const RecentPlay = ({ SongList, SongType }) => {
       <div>
         <p className="font-bold uppercase">{SongType} Songs</p>
         <div className="mt-4">
-          <SearchBar />
+          <SearchBar setSearchSong={setSearchSong} SearchSong={SearchSong}/>
         </div>
         <div className="mt-4 SonglistBox">
           {SongList.length !== 0
